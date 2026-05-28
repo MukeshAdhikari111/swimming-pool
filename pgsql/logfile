@@ -58,3 +58,4 @@
 2026-05-28 13:55:44.558 +0545 [11784] LOG:  checkpoint starting: time
 2026-05-28 13:55:45.048 +0545 [11784] LOG:  checkpoint complete: wrote 5 buffers (0.0%); 0 WAL file(s) added, 0 removed, 0 recycled; write=0.440 s, sync=0.015 s, total=0.490 s; sync files=5, longest=0.004 s, average=0.003 s; distance=1 kB, estimate=1013 kB; lsn=0/1AB70D0, redo lsn=0/1AB7098
 2026-05-28 14:20:44.092 +0545 [11784] LOG:  checkpoint starting: time
+2026-05-28 14:20:44.132 +0545 [11784] LOG:  checkpoint complete: wrote 1 buffers (0.0%); 0 WAL file(s) added, 0 removed, 0 recycled; write=0.005 s, sync=0.003 s, total=0.041 s; sync files=1, longest=0.003 s, average=0.003 s; distance=0 kB, estimate=912 kB; lsn=0/1AB72A8, redo lsn=0/1AB7270
