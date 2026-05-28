@@ -1,0 +1,333 @@
+.home-page {
+  min-height: 100vh;
+  color: #0f172a;
+  background: #f8fafc;
+}
+
+.home-hero {
+  min-height: 92vh;
+  display: flex;
+  flex-direction: column;
+  padding: clamp(1.25rem, 4vw, 3.5rem);
+  color: white;
+  background-image:
+    linear-gradient(90deg, rgba(6, 24, 38, 0.93) 0%, rgba(6, 24, 38, 0.75) 42%, rgba(6, 24, 38, 0.25) 100%),
+    url('/brand/pool-hero.jpg'),
+    url('/brand/pool-hero.svg');
+  background-size: cover;
+  background-position: center;
+}
+
+.home-nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+}
+
+.home-brand,
+.home-login-link,
+.home-actions a,
+.home-secondary {
+  display: inline-flex;
+  align-items: center;
+  text-decoration: none;
+}
+
+.home-brand {
+  gap: 0.75rem;
+  color: white;
+  font-weight: 900;
+  text-transform: uppercase;
+}
+
+.home-brand img {
+  width: 64px;
+  height: 64px;
+  object-fit: contain;
+  border-radius: 14px;
+  background: rgba(255, 255, 255, 0.94);
+  padding: 0.3rem;
+}
+
+.home-login-link {
+  gap: 0.45rem;
+  padding: 0.7rem 0.9rem;
+  border-radius: 8px;
+  background: white;
+  color: #0f172a;
+  font-weight: 800;
+}
+
+.home-copy {
+  max-width: 800px;
+  margin-top: auto;
+  padding: 6rem 0 3rem;
+}
+
+.home-pill,
+.section-kicker {
+  width: fit-content;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.45rem;
+  padding: 0.55rem 0.75rem;
+  border-radius: 999px;
+  color: #cffafe;
+  background: rgba(8, 145, 178, 0.25);
+  border: 1px solid rgba(165, 243, 252, 0.38);
+  font-weight: 800;
+}
+
+.home-copy h1 {
+  margin-top: 1rem;
+  font-size: clamp(2.5rem, 7vw, 6rem);
+  line-height: 0.96;
+}
+
+.home-copy p {
+  max-width: 640px;
+  margin-top: 1rem;
+  color: #e0f2fe;
+  font-size: clamp(1rem, 2vw, 1.25rem);
+  line-height: 1.65;
+}
+
+.home-location {
+  display: flex;
+  align-items: center;
+  gap: 0.55rem;
+  margin-top: 1rem;
+  font-weight: 900;
+}
+
+.home-actions {
+  display: flex;
+  gap: 0.75rem;
+  flex-wrap: wrap;
+  margin-top: 1.5rem;
+}
+
+.home-quick-info {
+  display: flex;
+  gap: 0.75rem;
+  flex-wrap: wrap;
+  margin-top: 1rem;
+}
+
+.home-quick-info span {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  color: #dbeafe;
+  font-weight: 700;
+}
+
+.home-primary,
+.home-secondary {
+  min-height: 46px;
+  gap: 0.45rem;
+  padding: 0.75rem 1rem;
+  border-radius: 8px;
+  font-weight: 900;
+}
+
+.home-primary {
+  color: white;
+  background: #06b6d4;
+}
+
+.home-secondary {
+  color: white;
+  border: 1px solid rgba(255, 255, 255, 0.38);
+  background: rgba(255, 255, 255, 0.12);
+}
+
+.home-section {
+  max-width: 1180px;
+  margin: 0 auto;
+  padding: clamp(3rem, 7vw, 5.5rem) 1.25rem;
+}
+
+.home-section .section-kicker {
+  color: #0891b2;
+  background: #ecfeff;
+  border-color: #a5f3fc;
+}
+
+.home-section h2 {
+  max-width: 760px;
+  margin-top: 0.9rem;
+  font-size: clamp(1.8rem, 4vw, 3.4rem);
+  line-height: 1.04;
+}
+
+.home-intro {
+  display: grid;
+  grid-template-columns: minmax(0, 1.1fr) minmax(280px, 0.9fr);
+  gap: 2rem;
+  align-items: end;
+}
+
+.home-intro > p {
+  color: #64748b;
+  line-height: 1.8;
+  font-size: 1.05rem;
+}
+
+.service-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1rem;
+  margin-top: 2rem;
+}
+
+.service-grid article,
+.home-management {
+  background: white;
+  border: 1px solid #e2e8f0;
+  border-radius: 8px;
+  box-shadow: 0 14px 35px rgba(15, 23, 42, 0.07);
+}
+
+.service-grid article {
+  padding: 1.25rem;
+}
+
+.service-grid article svg {
+  color: #06b6d4;
+  margin-bottom: 1rem;
+}
+
+.service-grid h3 {
+  font-size: 1.1rem;
+}
+
+.service-grid p,
+.home-management p {
+  color: #64748b;
+  line-height: 1.65;
+  margin-top: 0.6rem;
+}
+
+.home-management {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  padding: 2rem;
+  margin-bottom: 3rem;
+}
+
+.home-guest-info {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+}
+
+.home-product {
+  display: grid;
+  grid-template-columns: minmax(0, 0.9fr) minmax(320px, 1.1fr);
+  gap: 1.5rem;
+  align-items: start;
+}
+
+.home-product > div > p {
+  color: #64748b;
+  line-height: 1.7;
+  margin-top: 0.9rem;
+  max-width: 640px;
+}
+
+.product-list {
+  display: grid;
+  gap: 0.8rem;
+}
+
+.product-list div {
+  background: white;
+  border: 1px solid #e2e8f0;
+  border-left: 4px solid #06b6d4;
+  border-radius: 8px;
+  padding: 1rem;
+  box-shadow: 0 14px 35px rgba(15, 23, 42, 0.07);
+}
+
+.product-list strong,
+.product-list span {
+  display: block;
+}
+
+.product-list span {
+  color: #64748b;
+  margin-top: 0.35rem;
+  line-height: 1.55;
+}
+
+.guest-panel,
+.guest-list {
+  background: white;
+  border: 1px solid #e2e8f0;
+  border-radius: 8px;
+  box-shadow: 0 14px 35px rgba(15, 23, 42, 0.07);
+}
+
+.guest-panel {
+  padding: 2rem;
+}
+
+.guest-panel svg {
+  color: #06b6d4;
+}
+
+.guest-panel h2 {
+  margin-top: 1rem;
+}
+
+.guest-panel p {
+  color: #64748b;
+  line-height: 1.7;
+  margin-top: 0.75rem;
+}
+
+.guest-list {
+  display: grid;
+  gap: 0;
+  overflow: hidden;
+}
+
+.guest-list div {
+  padding: 1.25rem;
+  border-bottom: 1px solid #e2e8f0;
+}
+
+.guest-list div:last-child {
+  border-bottom: 0;
+}
+
+.guest-list strong,
+.guest-list span {
+  display: block;
+}
+
+.guest-list span {
+  color: #64748b;
+  margin-top: 0.35rem;
+  line-height: 1.5;
+}
+
+@media (max-width: 820px) {
+  .home-nav,
+  .home-management,
+  .home-intro,
+  .home-guest-info,
+  .home-product {
+    align-items: flex-start;
+    flex-direction: column;
+    grid-template-columns: 1fr;
+  }
+
+  .service-grid {
+    grid-template-columns: 1fr;
+  }
+}

@@ -1,0 +1,101 @@
+{
+  "visitors": [
+    {
+      "id": 1,
+      "name": "Siddharth Gautam",
+      "phone": "9851012345",
+      "type": "Adult",
+      "entry_time": "2026-05-25T08:30:46.004Z",
+      "exit_time": "2026-05-25T09:48:46.005Z",
+      "date": "2026-05-25",
+      "ticket_price": 300,
+      "payment_status": "Paid"
+    },
+    {
+      "id": 2,
+      "name": "Aarav Sharma",
+      "phone": "9841234567",
+      "type": "Child",
+      "entry_time": "2026-05-25T09:30:46.005Z",
+      "exit_time": null,
+      "date": "2026-05-25",
+      "ticket_price": 150,
+      "payment_status": "Paid"
+    },
+    {
+      "id": 3,
+      "name": "Pooja Adhikari",
+      "phone": "9808987654",
+      "type": "Adult",
+      "entry_time": "2026-05-25T10:30:46.005Z",
+      "exit_time": null,
+      "date": "2026-05-25",
+      "ticket_price": 300,
+      "payment_status": "Pending"
+    }
+  ],
+  "inventory": [
+    {
+      "is_deleted": false,
+      "id": 1,
+      "item_name": "Mineral Water (1L)",
+      "category": "Snacks",
+      "price": 50,
+      "stock": 45,
+      "last_updated": "2026-05-25T11:00:46.005Z"
+    },
+    {
+      "is_deleted": false,
+      "id": 2,
+      "item_name": "Sleek Swimming Goggles",
+      "category": "Gear",
+      "price": 650,
+      "stock": 12,
+      "last_updated": "2026-05-25T11:00:46.005Z"
+    },
+    {
+      "is_deleted": false,
+      "id": 3,
+      "item_name": "Silicone Swimming Cap",
+      "category": "Gear",
+      "price": 250,
+      "stock": 20,
+      "last_updated": "2026-05-25T11:00:46.005Z"
+    },
+    {
+      "is_deleted": false,
+      "id": 4,
+      "item_name": "Potato Chips",
+      "category": "Snacks",
+      "price": 60,
+      "stock": 30,
+      "last_updated": "2026-05-25T11:00:46.005Z"
+    },
+    {
+      "id": 5,
+      "item_name": "swimming kits",
+      "category": "Gear",
+      "price": 500,
+      "stock": 50,
+      "last_updated": "2026-05-26T06:57:05.125Z"
+    }
+  ],
+  "sales": [
+    {
+      "is_refunded": false,
+      "id": 1,
+      "item_id": 1,
+      "quantity": 2,
+      "total_price": 100,
+      "sale_date": "2026-05-25T09:00:46.005Z"
+    },
+    {
+      "is_refunded": false,
+      "id": 2,
+      "item_id": 4,
+      "quantity": 1,
+      "total_price": 60,
+      "sale_date": "2026-05-25T10:00:46.005Z"
+    }
+  ]
+}

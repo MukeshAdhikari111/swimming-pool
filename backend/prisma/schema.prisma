@@ -1,0 +1,133 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+model User {
+  id           Int      @id @default(autoincrement())
+  name         String   @db.VarChar(100)
+  email        String   @unique @db.VarChar(150)
+  passwordHash String   @map("password_hash") @db.VarChar(255)
+  role         String   @default("admin") @db.VarChar(30)
+  createdAt    DateTime @default(now()) @map("created_at")
+  updatedAt    DateTime @updatedAt @map("updated_at")
+  tasks        Task[]
+
+  @@map("users")
+}
+
+model Task {
+  id          Int       @id @default(autoincrement())
+  title       String    @db.VarChar(150)
+  description String?   @db.Text
+  status      String    @default("Pending") @db.VarChar(30)
+  dueDate     DateTime? @map("due_date")
+  userId      Int?      @map("user_id")
+  user        User?     @relation(fields: [userId], references: [id], onDelete: SetNull)
+  createdAt   DateTime  @default(now()) @map("created_at")
+  updatedAt   DateTime  @updatedAt @map("updated_at")
+
+  @@map("tasks")
+}
+
+model Visitor {
+  id            Int       @id @default(autoincrement())
+  name          String    @db.VarChar(100)
+  phone         String?   @db.VarChar(20)
+  type          String    @db.VarChar(20)
+  entryTime     DateTime  @default(now()) @map("entry_time")
+  exitTime      DateTime? @map("exit_time")
+  date          DateTime  @default(now()) @db.Date
+  lockerNumber  String?   @map("locker_number") @db.VarChar(20)
+  ticketId      String?   @unique @map("ticket_id") @db.VarChar(40)
+  barcodeValue  String?   @map("barcode_value") @db.VarChar(80)
+  ticketPdfPath String?   @map("ticket_pdf_path") @db.VarChar(255)
+  ticketPrice   Decimal   @map("ticket_price") @db.Decimal(10, 2)
+  paymentStatus String    @default("Paid") @map("payment_status") @db.VarChar(20)
+
+  @@map("visitors")
+}
+
+model InventoryItem {
+  id          Int      @id @default(autoincrement())
+  itemName    String   @map("item_name") @db.VarChar(100)
+  category    String   @db.VarChar(50)
+  price       Decimal  @db.Decimal(10, 2)
+  stock       Int      @default(0)
+  lastUpdated DateTime @default(now()) @map("last_updated")
+  isDeleted   Boolean  @default(false) @map("is_deleted")
+  sales       Sale[]
+
+  @@map("inventory")
+}
+
+model Sale {
+  id          Int           @id @default(autoincrement())
+  itemId      Int?          @map("item_id")
+  item        InventoryItem? @relation(fields: [itemId], references: [id])
+  quantity    Int
+  totalPrice  Decimal       @map("total_price") @db.Decimal(10, 2)
+  saleDate    DateTime      @default(now()) @map("sale_date")
+  isRefunded  Boolean       @default(false) @map("is_refunded")
+
+  @@map("sales")
+}
+
+model Setting {
+  key   String @id @db.VarChar(50)
+  value String @db.VarChar(255)
+
+  @@map("settings")
+}
+
+model Product {
+  id           Int            @id @default(autoincrement())
+  name         String         @db.VarChar(100)
+  description  String?        @db.Text
+  price        Decimal        @default(0) @db.Decimal(10, 2)
+  createdAt    DateTime       @default(now()) @map("created_at")
+  updatedAt    DateTime       @updatedAt @map("updated_at")
+  inventoryHub InventoryHub[]
+
+  @@map("products")
+}
+
+model Customer {
+  id        Int       @id @default(autoincrement())
+  name      String    @db.VarChar(100)
+  email     String?   @db.VarChar(100)
+  phone     String?   @db.VarChar(20)
+  createdAt DateTime  @default(now()) @map("created_at")
+  updatedAt DateTime  @updatedAt @map("updated_at")
+  invoices  Invoice[]
+
+  @@map("customers")
+}
+
+model Invoice {
+  id          Int       @id @default(autoincrement())
+  customerId  Int?      @map("customer_id")
+  customer    Customer? @relation(fields: [customerId], references: [id], onDelete: SetNull)
+  totalAmount Decimal   @default(0) @map("total_amount") @db.Decimal(10, 2)
+  status      String    @default("Pending") @db.VarChar(20)
+  createdAt   DateTime  @default(now()) @map("created_at")
+  updatedAt   DateTime  @updatedAt @map("updated_at")
+
+  @@map("invoices")
+}
+
+model InventoryHub {
+  id            Int      @id @default(autoincrement())
+  productId     Int?     @map("product_id")
+  product       Product? @relation(fields: [productId], references: [id], onDelete: Cascade)
+  stockQuantity Int      @default(0) @map("stock_quantity")
+  location      String   @default("Warehouse A") @db.VarChar(100)
+  createdAt     DateTime @default(now()) @map("created_at")
+  updatedAt     DateTime @updatedAt @map("updated_at")
+
+  @@map("inventory_hub")
+}

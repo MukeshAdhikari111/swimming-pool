@@ -1,0 +1,198 @@
+.entry-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 360px;
+  gap: 1rem;
+  align-items: start;
+}
+
+.form-section, .receipt-section {
+  padding: 1.25rem;
+  background: #ffffff;
+  border: 1px solid var(--glass-border);
+  border-radius: 8px;
+  box-shadow: var(--glass-shadow);
+}
+
+.form-section h2, .receipt-section h2 {
+  font-size: 1.25rem;
+  margin-bottom: 1.5rem;
+  font-weight: 600;
+  margin-bottom: 0.25rem;
+}
+
+.entry-toolbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 1rem;
+  margin-bottom: 1.25rem;
+  padding-bottom: 1rem;
+  border-bottom: 1px solid var(--glass-border);
+}
+
+.entry-toolbar p {
+  color: var(--text-muted);
+}
+
+.entry-clock {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.45rem;
+  padding: 0.6rem 0.75rem;
+  border: 1px solid var(--glass-border);
+  border-radius: 8px;
+  color: var(--primary);
+  font-weight: 800;
+  white-space: nowrap;
+}
+
+.form-group {
+  margin-bottom: 1rem;
+}
+
+.form-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+}
+
+.input-with-icon {
+  position: relative;
+}
+
+.input-icon {
+  position: absolute;
+  left: 1rem;
+  top: 50%;
+  transform: translateY(-50%);
+  color: var(--text-muted);
+}
+
+.pl-10 {
+  padding-left: 2.5rem;
+}
+
+.entry-input {
+  min-height: 56px;
+  font-size: 1rem;
+}
+
+.w-full {
+  width: 100%;
+}
+
+.mt-4 {
+  margin-top: 1rem;
+}
+
+.bg-disabled {
+  background: #f8fafc;
+  color: var(--text-muted);
+  cursor: not-allowed;
+}
+
+.entry-total {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  padding: 1rem;
+  margin-top: 0.25rem;
+  border-radius: 8px;
+  background: #ecfeff;
+  border: 1px solid #a5f3fc;
+}
+
+.entry-total span {
+  color: var(--text-muted);
+  font-weight: 700;
+}
+
+.entry-total strong {
+  font-size: 1.35rem;
+  color: var(--navy);
+}
+
+.generate-ticket-btn {
+  min-height: 56px;
+  margin-top: 1rem;
+  font-size: 1rem;
+}
+
+.receipt-ticket {
+  background: #ffffff;
+  color: #000;
+  padding: 1.5rem;
+  border-radius: 8px;
+  font-family: monospace;
+  margin-bottom: 1.5rem;
+  position: relative;
+}
+
+.receipt-ticket::before, .receipt-ticket::after {
+  content: '';
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  background: #ffffff;
+  border-radius: 50%;
+  top: 60px;
+}
+
+.receipt-ticket::before {
+  left: -10px;
+}
+.receipt-ticket::after {
+  right: -10px;
+}
+
+.receipt-header {
+  text-align: center;
+  border-bottom: 2px dashed #ccc;
+  padding-bottom: 1rem;
+  margin-bottom: 1rem;
+}
+
+.receipt-header h3 {
+  font-size: 1.25rem;
+  font-weight: 700;
+  margin: 0;
+}
+
+.r-row {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 0.5rem;
+  font-size: 0.95rem;
+}
+
+.r-divider {
+  border-top: 2px dashed #ccc;
+  margin: 1rem 0;
+}
+
+.receipt-footer {
+  text-align: center;
+  margin-top: 1.5rem;
+  font-size: 0.85rem;
+  color: #666;
+}
+
+.receipt-actions {
+  display: grid;
+  gap: 0.75rem;
+}
+
+@media (max-width: 1024px) {
+  .entry-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 560px) {
+  .entry-toolbar,
+  .form-row {
+    grid-template-columns: 1fr;
+    flex-direction: column;
+  }
+}

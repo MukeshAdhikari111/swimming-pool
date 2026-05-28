@@ -1,0 +1,13 @@
+@echo off
+echo Starting AquaManage - Swimming Pool Management System...
+
+echo Starting Backend Server...
+start cmd /k "cd backend && npm start"
+
+echo Starting Frontend Server...
+start cmd /k "cd frontend && npm run dev"
+
+echo Both servers are starting...
+echo Backend: http://localhost:5000
+echo Frontend: http://localhost:5173
+pause

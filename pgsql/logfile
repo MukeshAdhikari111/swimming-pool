@@ -1,0 +1,60 @@
+2026-05-26 13:25:56.119 +0545 [4876] LOG:  starting PostgreSQL 16.3, compiled by Visual C++ build 1938, 64-bit
+2026-05-26 13:25:56.135 +0545 [4876] LOG:  listening on IPv6 address "::1", port 5432
+2026-05-26 13:25:56.135 +0545 [4876] LOG:  listening on IPv4 address "127.0.0.1", port 5432
+2026-05-26 13:25:57.492 +0545 [6168] LOG:  database system was shut down at 2026-05-26 13:25:41 +0545
+2026-05-26 13:25:58.687 +0545 [4876] LOG:  database system is ready to accept connections
+2026-05-28 10:19:27.218 +0545 [10188] LOG:  starting PostgreSQL 16.3, compiled by Visual C++ build 1938, 64-bit
+2026-05-28 10:19:27.223 +0545 [10188] LOG:  listening on IPv6 address "::1", port 5432
+2026-05-28 10:19:27.223 +0545 [10188] LOG:  listening on IPv4 address "127.0.0.1", port 5432
+2026-05-28 10:19:28.286 +0545 [2172] LOG:  database system was interrupted; last known up at 2026-05-26 13:28:22 +0545
+2026-05-28 10:19:30.691 +0545 [2172] LOG:  database system was not properly shut down; automatic recovery in progress
+2026-05-28 10:19:30.705 +0545 [2172] LOG:  redo starts at 0/15781B0
+2026-05-28 10:19:30.805 +0545 [2172] LOG:  invalid record length at 0/1A33598: expected at least 24, got 0
+2026-05-28 10:19:30.805 +0545 [2172] LOG:  redo done at 0/1A33560 system usage: CPU: user: 0.01 s, system: 0.06 s, elapsed: 0.09 s
+2026-05-28 10:19:30.811 +0545 [11784] LOG:  checkpoint starting: end-of-recovery immediate wait
+2026-05-28 10:19:32.093 +0545 [11784] LOG:  checkpoint complete: wrote 1010 buffers (6.2%); 0 WAL file(s) added, 0 removed, 0 recycled; write=0.326 s, sync=0.936 s, total=1.286 s; sync files=327, longest=0.015 s, average=0.003 s; distance=4845 kB, estimate=4845 kB; lsn=0/1A33598, redo lsn=0/1A33598
+2026-05-28 10:19:33.333 +0545 [10188] LOG:  database system is ready to accept connections
+2026-05-28 10:23:37.840 +0545 [9812] LOG:  invalid length of startup packet
+2026-05-28 10:23:54.186 +0545 [15512] LOG:  invalid length of startup packet
+2026-05-28 10:24:03.900 +0545 [8016] LOG:  invalid length of startup packet
+2026-05-28 10:24:30.100 +0545 [11784] LOG:  checkpoint starting: time
+2026-05-28 10:24:33.231 +0545 [11784] LOG:  checkpoint complete: wrote 29 buffers (0.2%); 0 WAL file(s) added, 0 removed, 0 recycled; write=3.061 s, sync=0.048 s, total=3.132 s; sync files=17, longest=0.004 s, average=0.003 s; distance=0 kB, estimate=4360 kB; lsn=0/1A339B8, redo lsn=0/1A33980
+2026-05-28 10:29:30.237 +0545 [11784] LOG:  checkpoint starting: time
+2026-05-28 10:29:31.051 +0545 [11784] LOG:  checkpoint complete: wrote 8 buffers (0.0%); 0 WAL file(s) added, 0 removed, 0 recycled; write=0.767 s, sync=0.025 s, total=0.815 s; sync files=8, longest=0.005 s, average=0.004 s; distance=2 kB, estimate=3924 kB; lsn=0/1A344C8, redo lsn=0/1A34490
+2026-05-28 10:44:30.072 +0545 [11784] LOG:  checkpoint starting: time
+2026-05-28 10:44:38.901 +0545 [11784] LOG:  checkpoint complete: wrote 81 buffers (0.5%); 0 WAL file(s) added, 0 removed, 0 recycled; write=8.616 s, sync=0.166 s, total=8.830 s; sync files=63, longest=0.005 s, average=0.003 s; distance=412 kB, estimate=3573 kB; lsn=0/1A9B758, redo lsn=0/1A9B720
+2026-05-28 10:49:30.906 +0545 [11784] LOG:  checkpoint starting: time
+2026-05-28 10:49:31.618 +0545 [11784] LOG:  checkpoint complete: wrote 7 buffers (0.0%); 0 WAL file(s) added, 0 removed, 0 recycled; write=0.667 s, sync=0.024 s, total=0.713 s; sync files=7, longest=0.007 s, average=0.004 s; distance=0 kB, estimate=3216 kB; lsn=0/1A9BB40, redo lsn=0/1A9BB08
+2026-05-28 11:29:30.706 +0545 [11784] LOG:  checkpoint starting: time
+2026-05-28 11:29:33.086 +0545 [11784] LOG:  checkpoint complete: wrote 21 buffers (0.1%); 0 WAL file(s) added, 0 removed, 0 recycled; write=2.281 s, sync=0.060 s, total=2.382 s; sync files=19, longest=0.011 s, average=0.004 s; distance=90 kB, estimate=2903 kB; lsn=0/1AB25B0, redo lsn=0/1AB2578
+2026-05-28 11:36:05.564 +0545 [10692] ERROR:  null value in column "updated_at" of relation "products" violates not-null constraint
+2026-05-28 11:36:05.564 +0545 [10692] DETAIL:  Failing row contains (2, Swimming pool machine , 100% gurantee, 1000.00, 2026-05-28 11:36:05.552, null).
+2026-05-28 11:36:05.564 +0545 [10692] STATEMENT:  INSERT INTO products (name, description, price) VALUES ($1, $2, $3) RETURNING *
+2026-05-28 11:36:35.901 +0545 [11416] ERROR:  null value in column "updated_at" of relation "products" violates not-null constraint
+2026-05-28 11:36:35.901 +0545 [11416] DETAIL:  Failing row contains (3, Swimming pool machine , 100% gurantee, 1000.00, 2026-05-28 11:36:35.9, null).
+2026-05-28 11:36:35.901 +0545 [11416] STATEMENT:  INSERT INTO products (name, description, price) VALUES ($1, $2, $3) RETURNING *
+2026-05-28 11:39:30.114 +0545 [11784] LOG:  checkpoint starting: time
+2026-05-28 11:39:30.608 +0545 [11784] LOG:  checkpoint complete: wrote 5 buffers (0.0%); 0 WAL file(s) added, 0 removed, 0 recycled; write=0.424 s, sync=0.027 s, total=0.495 s; sync files=5, longest=0.015 s, average=0.006 s; distance=1 kB, estimate=2613 kB; lsn=0/1AB2C20, redo lsn=0/1AB2BE8
+2026-05-28 11:54:15.038 +0545 [11832] LOG:  could not receive data from client: An existing connection was forcibly closed by the remote host.
+	
+2026-05-28 11:59:30.660 +0545 [11784] LOG:  checkpoint starting: time
+2026-05-28 11:59:31.601 +0545 [11784] LOG:  checkpoint complete: wrote 9 buffers (0.1%); 0 WAL file(s) added, 0 removed, 0 recycled; write=0.878 s, sync=0.035 s, total=0.942 s; sync files=8, longest=0.015 s, average=0.005 s; distance=3 kB, estimate=2352 kB; lsn=0/1AB3900, redo lsn=0/1AB38C8
+2026-05-28 12:04:30.604 +0545 [11784] LOG:  checkpoint starting: time
+2026-05-28 12:04:31.209 +0545 [11784] LOG:  checkpoint complete: wrote 6 buffers (0.0%); 0 WAL file(s) added, 0 removed, 0 recycled; write=0.530 s, sync=0.031 s, total=0.606 s; sync files=6, longest=0.016 s, average=0.006 s; distance=1 kB, estimate=2117 kB; lsn=0/1AB40C8, redo lsn=0/1AB4090
+2026-05-28 12:35:44.413 +0545 [11784] LOG:  checkpoint starting: time
+2026-05-28 12:35:45.040 +0545 [11784] LOG:  checkpoint complete: wrote 6 buffers (0.0%); 0 WAL file(s) added, 0 removed, 0 recycled; write=0.551 s, sync=0.035 s, total=0.628 s; sync files=6, longest=0.016 s, average=0.006 s; distance=2 kB, estimate=1905 kB; lsn=0/1AB4AA0, redo lsn=0/1AB4A68
+2026-05-28 12:40:44.037 +0545 [11784] LOG:  checkpoint starting: time
+2026-05-28 12:40:44.561 +0545 [11784] LOG:  checkpoint complete: wrote 5 buffers (0.0%); 0 WAL file(s) added, 0 removed, 0 recycled; write=0.444 s, sync=0.019 s, total=0.525 s; sync files=5, longest=0.006 s, average=0.004 s; distance=2 kB, estimate=1715 kB; lsn=0/1AB5410, redo lsn=0/1AB53D8
+2026-05-28 13:05:44.602 +0545 [11784] LOG:  checkpoint starting: time
+2026-05-28 13:05:45.299 +0545 [11784] LOG:  checkpoint complete: wrote 7 buffers (0.0%); 0 WAL file(s) added, 0 removed, 0 recycled; write=0.634 s, sync=0.031 s, total=0.697 s; sync files=7, longest=0.015 s, average=0.005 s; distance=1 kB, estimate=1544 kB; lsn=0/1AB5A70, redo lsn=0/1AB5A38
+2026-05-28 13:10:44.292 +0545 [11784] LOG:  checkpoint starting: time
+2026-05-28 13:10:44.440 +0545 [11784] LOG:  checkpoint complete: wrote 2 buffers (0.0%); 0 WAL file(s) added, 0 removed, 0 recycled; write=0.108 s, sync=0.010 s, total=0.149 s; sync files=2, longest=0.008 s, average=0.005 s; distance=1 kB, estimate=1389 kB; lsn=0/1AB6030, redo lsn=0/1AB5FE0
+2026-05-28 13:15:44.444 +0545 [11784] LOG:  checkpoint starting: time
+2026-05-28 13:15:44.923 +0545 [11784] LOG:  checkpoint complete: wrote 5 buffers (0.0%); 0 WAL file(s) added, 0 removed, 0 recycled; write=0.442 s, sync=0.009 s, total=0.480 s; sync files=5, longest=0.003 s, average=0.002 s; distance=1 kB, estimate=1251 kB; lsn=0/1AB6570, redo lsn=0/1AB6538
+2026-05-28 13:35:44.936 +0545 [11784] LOG:  checkpoint starting: time
+2026-05-28 13:35:45.526 +0545 [11784] LOG:  checkpoint complete: wrote 6 buffers (0.0%); 0 WAL file(s) added, 0 removed, 0 recycled; write=0.535 s, sync=0.020 s, total=0.590 s; sync files=6, longest=0.004 s, average=0.004 s; distance=1 kB, estimate=1126 kB; lsn=0/1AB6988, redo lsn=0/1AB6950
+2026-05-28 13:50:01.590 +0545 [15620] LOG:  could not receive data from client: An existing connection was forcibly closed by the remote host.
+	
+2026-05-28 13:55:44.558 +0545 [11784] LOG:  checkpoint starting: time
+2026-05-28 13:55:45.048 +0545 [11784] LOG:  checkpoint complete: wrote 5 buffers (0.0%); 0 WAL file(s) added, 0 removed, 0 recycled; write=0.440 s, sync=0.015 s, total=0.490 s; sync files=5, longest=0.004 s, average=0.003 s; distance=1 kB, estimate=1013 kB; lsn=0/1AB70D0, redo lsn=0/1AB7098
+2026-05-28 14:20:44.092 +0545 [11784] LOG:  checkpoint starting: time

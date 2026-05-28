@@ -1,0 +1,15 @@
+<svg width="360" height="360" viewBox="0 0 360 360" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="360" height="360" rx="48" fill="#061826"/>
+  <path d="M180 31L304 78V172C304 247 253 313 180 335C107 313 56 247 56 172V78L180 31Z" fill="#0EA5B7" stroke="#F8FAFC" stroke-width="8"/>
+  <path d="M180 54L282 92V172C282 235 240 291 180 311C120 291 78 235 78 172V92L180 54Z" fill="#DDFCFD" stroke="#14324A" stroke-width="6"/>
+  <path d="M108 202C133 177 161 183 184 203C210 226 237 225 263 201V250H98V214C101 210 104 206 108 202Z" fill="#38BDF8"/>
+  <path d="M93 218C122 193 151 197 178 220C206 244 237 240 267 213" stroke="#0F766E" stroke-width="7" stroke-linecap="round"/>
+  <path d="M211 111C228 91 251 82 277 81C253 99 235 119 225 143C219 135 214 124 211 111Z" fill="#14324A"/>
+  <path d="M149 111C132 91 109 82 83 81C107 99 125 119 135 143C141 135 146 124 149 111Z" fill="#14324A"/>
+  <path d="M180 76C209 102 225 137 222 174C205 168 192 158 180 143C168 158 155 168 138 174C135 137 151 102 180 76Z" fill="#14324A"/>
+  <path d="M154 214C185 190 216 187 248 203" stroke="#EF4444" stroke-width="10" stroke-linecap="round"/>
+  <path d="M164 229C194 205 223 202 255 218" stroke="#06B6D4" stroke-width="10" stroke-linecap="round"/>
+  <rect x="43" y="256" width="274" height="54" rx="12" fill="#F8FAFC" stroke="#14324A" stroke-width="6"/>
+  <text x="180" y="289" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="25" font-weight="900" fill="#0F766E">US AMUSEMENT PARK</text>
+  <text x="180" y="310" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="11" font-weight="800" fill="#14324A">POOL • SLIDE • ZIPLINE • 18D • BULL GAME</text>
+</svg>

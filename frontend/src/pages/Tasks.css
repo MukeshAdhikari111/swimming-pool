@@ -1,0 +1,42 @@
+.tasks-grid {
+  display: grid;
+  grid-template-columns: 320px minmax(0, 1fr);
+  gap: 1rem;
+}
+
+.task-panel {
+  display: grid;
+  gap: 0.8rem;
+  align-content: start;
+  padding: 1rem;
+  background: #ffffff;
+  border: 1px solid var(--glass-border);
+  border-radius: 8px;
+  box-shadow: var(--glass-shadow);
+}
+
+.task-panel h2 {
+  font-size: 1rem;
+}
+
+.task-table-panel {
+  overflow: hidden;
+}
+
+.task-modal-form {
+  display: grid;
+  gap: 0.65rem;
+  text-align: left;
+}
+
+.task-modal-form .swal2-input,
+.task-modal-form .swal2-select {
+  width: 100%;
+  margin: 0;
+}
+
+@media (max-width: 860px) {
+  .tasks-grid {
+    grid-template-columns: 1fr;
+  }
+}
